@@ -810,3 +810,6 @@ color: #8AADBA;
     color: #FFFFFF;
     transform: translateY(-1px);
 }
+.swiper__image .swiper-button-next::after{
+    display: none;
+}

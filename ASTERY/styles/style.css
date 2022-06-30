@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+
 }
 
 body{
@@ -264,9 +264,11 @@ header{
     color: #737373;
 }
 .body__content__main__catalog__item__products{
-    display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.body__content__main__catalog__item__products__new{
+    display: flex;
 }
 .body__content__main__catalog__item__products__good{
     border: 1px solid;
@@ -668,11 +670,11 @@ header{
 }
 .footer__item__bot__item1 p{
     font-family: 'Ubuntu';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-color: #8AADBA;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8AADBA;
 }
 .footer__item__bot__item2{
     display: flex;
@@ -717,11 +719,13 @@ color: #8AADBA;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .swiper-wrapper{
     display: flex;
     width: 100%;
     min-width: 0;
+    position: relative;
 }
 .body__content__main__about{
     display: flex;
@@ -812,4 +816,44 @@ color: #8AADBA;
 }
 .swiper__image .swiper-button-next::after{
     display: none;
+}
+.swiper__image .swiper-button-prev::after{
+    display: none;
+}
+.swiper__image{
+    width: 50%;
+}
+.olives__slider__buttons{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 400px;
+    vertical-align: bottom;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+}
+.swiper-button-prev{
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+.olives__slider__buttons__container{
+    display: flex;
+    width: 80px;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: space-between;
+    float: left;
+}
+.olives__info__content__points{
+    margin-bottom: -200px;
+    height: 200px;
+    display: flex;
+}
+.slider__pagination{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 180px;
 }

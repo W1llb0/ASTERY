@@ -19,4 +19,12 @@ const swiperDiscount = new Swiper('#swiper__discount', {
     slidesPerView: 4,
 });
 
+const swiperNews = new Swiper('#swiper__news', {
+    loop: true,
+    navigation: {
+        nextEl: '.olives__news__slider__button__next',
+        prevEl: '.olives__news__slider__button__prev'
+    },
+    slidesPerView: 3,
+});
 

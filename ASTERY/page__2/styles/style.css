@@ -1,0 +1,795 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 550;
+}
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    z-index: 100;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__menu{
+    display: flex;
+    align-items: center;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px; 
+}
+.header__menu-item{
+    margin-left: 20px;
+    position: relative;
+}
+.header__menu-item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    transform: scale(0);
+    transition: transform .3s;
+}
+.header__menu-item:hover::before{
+    transform: scale(1);
+}
+.header__menu-item a{
+    color: #000000;
+    transition: color .3s;
+}
+
+.header__menu-item a:hover{
+    color: rgb(255, 0, 0);
+}
+.ellipse{
+    width: 140px;
+    height: 140px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-bottom: -50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo__wrapper{
+    display: flex;
+}
+.logo{
+    margin: 0;
+    top: 50%;
+    left: 50%;
+
+}
+.logo__info{
+    display: inline-block;
+    align-items: center;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    font-style: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.logo__info p{
+    font-size: 12px;
+    margin-top: -10px;
+}
+.header__contacts{
+    display: flex;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    font-style: 18px;
+}
+.header__contacts div{
+    margin: 5px;
+}
+.header__contacts__tel{
+    display: inline-block;
+}
+.header__buttons{
+    display: flex;
+}
+.header__buttons div{
+    padding-right: 10px;
+}
+.header__buttons__heart{
+    margin-top: -5px;
+}
+.body__navigation{
+    width: 100%;
+    height: 200px;
+    background-color: #155B74;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body__navigation__container{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+}
+.body__navigation__container a{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #8AADBA;
+}
+.body__navigation__container a:hover{
+    color: #FFFFFF;
+}
+.body__navigation__container__item__separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8AADBA;
+    border-radius: 30px;
+    transform: rotate(-90deg);
+    padding: 2px;
+}
+.body__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body__content__main{
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1530px;
+    border: 1px solid red;
+}
+.body__content__main__catalog__stock__item__title__buttons a{
+    border: 1px solid;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 60px;
+    height: 50px;
+    border-color: #454545;
+    margin-left: 5px;
+}
+.body__content__main__catalog__stock__item__title__buttons a:hover{
+    border-color: #155B74;
+    transform: translateY(-1px);
+}
+.body__content__main__catalog__stock{
+    max-width: 1530px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.product__card__item__top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+}
+.product__card__item__top__image{
+    width: 100%;
+    border-right: 1px solid #E0E0E0;
+    height: 600px;
+}
+.product__card__item__top__image__wrapper{
+    width: 90%;
+    height: 90%;
+    border: 1px solid red;
+};
+.product__card__item__top__info{
+    width: 50%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product__card__item__top__info__wrapper{
+    width: 90%;
+    height: 90%;
+    border: 1px solid red;
+}
+.product__card__item__top__info__wrapper__title h2{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.product__card__item__top__info__wrapper__product__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product__card__item__top__info__wrapper__product__info__value{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #454545;
+}
+.product__card__item__top__info__wrapper__product__info__code a{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #155B74;
+}
+.product__card__item__top__info__wrapper__product__description{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.product__card__item__top__info__wrapper__amount__title p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+
+}
+.product__card__item__top__info__wrapper__amount__buttons{
+    display: flex;
+}
+.product__card__item__top__info__wrapper__amount__buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    border-radius: 50%;
+}
+.product__card__item__top__info__wrapper__amount__buttons button:hover{
+    border-color: #155B74;
+    background-color: #155B74;
+    color: #FFFFFF;
+}
+.product__card__item__top__info__wrapper__amount__buttons__amount{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.product__card__item__top__info__wrapper__amount__buttons__amount h3{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.product__card__item__top__info__wrapper__price p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.product__card__item__top__info__wrapper__buttons{
+    display: flex;
+    align-items: center;
+}
+.product__card__item__top__info__wrapper__buttons__add__to__cart a{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #155B74;
+    border-radius: 30px;
+    padding: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-right: 10px;
+    color: #155B74;
+}
+.product__card__item__top__info__wrapper__buttons__add__to__cart a:hover{
+    color: #FFFFFF;
+    background-color: #155B74;
+}
+.product__card__item__top__info__wrapper__buttons__like img{
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+}
+.product__card__item__top__info__wrapper__buttons__like img:hover{
+    border-color: #155B74;
+}
+.product__card__item__bot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product__card__item__bot__wrapper{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border: 1px solid purple;
+}
+.product__card__item__bot__wrapper h2{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.product__card__item__bot__wrapper p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.stock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+.stock h1{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+.body__content__main__catalog__stock__item__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.body__content__main__catalog__stock__item__title__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body__content__main__catalog__item__products{
+    align-items: center;
+    justify-content: space-around;
+}
+.body__content__main__catalog__item__products__new{
+    display: flex;
+}
+.body__content__main__catalog__item__products__good{
+    border: 1px solid;
+    border-color: #E0E0E0;
+    width: 380px;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+}
+.body__content__main__catalog__item__products__good__prices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.old__price{
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #BDBDBD;
+}
+.goods{
+    max-width: 220px;
+    max-height: 400px;
+    font-weight: 600;
+}
+.body__content__main__catalog__item__products__good1__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.volume{
+    background-color: #d5f6ff;
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.good__info__code{
+    color: #155B74;
+}
+.add__to__cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-color: #454545;
+    height: 40px;
+    width: 100%;
+}
+.add__to__cart__button{
+    border: 1px solid;
+    border-color: #155B74;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 60px;
+    padding: 18px 40px 18px 40px;
+    color: #155B74;
+    font-weight: 700;
+}
+.add__to__cart__button:hover{
+    background: #155B74;
+    box-shadow: 0 15px 20px rgba(46, 89, 229, 0.4);
+    color: #FFFFFF;
+    transform: translateY(-7px);
+}
+.add__to__cart__button a:hover{
+    color: #FFFFFF;
+}
+.add__to__cart__like{
+    border: 1px solid;
+    border-color: #E0E0E0;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    height: 50px;
+}
+.add__to__cart__like:hover{
+    border-color: #155B74;
+    transform: translateY(-1px);
+}
+.good__picture{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goods__discount{
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EB5757;
+    color: #FFFFFF;
+    border-radius: 30px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 16px;
+}
+.new__good{
+    background-color: #2D9CDB;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.new__good__hiden{
+    visibility: hidden;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #155B74;
+    width: 100%;
+    height: 400px;
+}
+.footer__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1530px;
+    height: 350px;
+    margin-top: 50px;
+}
+.footer__wrapper__item{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.footer__item__top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.footer__item__top__item2__link::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    transform: scale(0);
+    transition: transform .3s;
+}
+.footer__item__top__item2__link:hover::before{
+    transform: scale(1);
+}
+.footer__item__top__item2__link:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1);
+}
+.footer__item__top__item3 a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    transform: scale(0);
+    transition: transform .3s;
+}
+.footer__item__top__item3 a:hover::before{
+    transform: scale(1);
+}
+.footer__item__top__item3 a:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1);
+}
+.footer__item__top__item5__contacts__phone::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    transform: scale(0);
+    transition: transform .3s;
+}
+.footer__item__top__item5__contacts__phone:hover::before{
+    transform: scale(1);
+}
+.footer__item__top__item5__contacts__phone:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1);
+}
+.all__rights__reserved{
+    color: #8AADBA;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+}
+.footer__item__top__item2{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: top;
+}
+.footer__item__top__item2__link{
+    color: #FFFFFF;
+}
+.footer__item__top__item2__title{
+    color: #CDEFF9;
+}
+.footer__item__top__item3{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: top;
+}
+.footer__item__top__item3 a{
+    color: #FFFFFF;
+}
+.pseudo__title{
+    opacity: 0;
+    pointer-events: none;
+}
+.footer__item__top__item4{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    vertical-align: top;
+}
+.footer__item__top__item5{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: top;
+}
+.footer__item__top__item5__title a{
+    color: #CDEFF9;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+}
+.footer__item__top__item5__contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__item__top__item5__contacts img{
+    margin-left: 10px;
+}
+.footer__item__top__item5__contacts a{
+    color: #FFFFFF;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+}
+.footer__item__top__item5__call__back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.footer__item__top__item5__call__back__button{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    padding: 15px 50px 15px 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+}
+.footer__item__top__item5__call__back__button:hover{
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    transform: translateY(-7px);
+}
+
+.footer__item__bot{
+    height: 100px;
+    vertical-align: bottom;
+    border-top: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__item__bot__item1 p{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8AADBA;
+}
+.footer__item__bot__item2{
+    display: flex;
+}
+.footer__item__bot__item2 a{
+    border: 1px solid #8AADBA;
+    padding: 15px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+}
+.footer__instagram:hover{
+    background-image: linear-gradient(to left, violet, red);
+    transform: translateY(-2px);
+    border-color: red;
+}
+.footer__facebook:hover{
+    background-color: #002e69;
+    border-color: #002e69;
+    transform: translateY(-2px);
+}
+.footer__youtube:hover{
+    background-color: red;
+    border-color: red;
+    transform: translateY(-2px);
+}
+.footer__item__bot__item3 a{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #8AADBA;
+}

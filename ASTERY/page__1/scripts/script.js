@@ -36,4 +36,9 @@ const swiperOurPartners = new Swiper('#our__partners__slider', {
     },
     slidesPerView: 5,
 });
-
+let questionsAndAnswersItems = document.querySelectorAll('.questions__answers__container__content__left__item');
+questionsAndAnswersItems.forEach(function(item){
+    item.addEventListener('click', function(){
+        this.classList.toggle('active')
+    })
+})

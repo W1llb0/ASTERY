@@ -28,6 +28,7 @@ const swiperNews = new Swiper('#swiper__news', {
     slidesPerView: 4,
 });
 
+
 const swiperOurPartners = new Swiper('#our__partners__slider', {
     loop: true,
     navigation: {
